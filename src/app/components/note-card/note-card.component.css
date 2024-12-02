@@ -1,0 +1,43 @@
+/* Estilo del artículo */
+.note-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background-color: #4ac2ca; /* Fondo blanco para destacar */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo del título */
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1c1e21;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.card-title:focus {
+    border-color: #1877f2; /* Azul de Facebook */
+}
+
+/* Estilo del checkbox */
+input[type="checkbox"] {
+    accent-color: #1877f2; /* Azul para el checkbox */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
