@@ -1,0 +1,57 @@
+/* Formulario de notas */
+.note-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #3b9da4; /* Fondo claro */
+    border: 2px solid #1877f2; /* Borde azul Facebook */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Campo de entrada */
+.note-title {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de foco en el input */
+.note-title:focus {
+    border-color: #1877f2; /* Azul de Facebook */
+    box-shadow: 0 0 5px rgba(24, 119, 242, 0.5);
+}
+
+/* Botón */
+.create-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1877f2; /* Azul Facebook */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover del botón */
+.create-btn:hover {
+    background-color: #145dbf; /* Azul más oscuro */
+    transform: scale(1.1);
+}
+
+/* Efecto active del botón */
+.create-btn:active {
+    background-color: #133a6f; /* Azul más profundo */
+    transform: scale(0.95);
+}

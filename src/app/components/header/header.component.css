@@ -1,46 +1,47 @@
+
+
 /* Header */
 .header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
-    padding: 20px;
-    background-color: #1877f2; /* Azul característico de Facebook */
-    color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px;
+    background-color: #1877f2; /* Azul de Facebook */
+    color: #fff; /* Texto blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #145dbf; /* Línea decorativa */
 }
 
 .header h1 {
     margin: 0;
-    font-size: 20px;
-    font-weight: normal;
-    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Nav */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 15px;
-    text-align: center;
-}
 
-.nav/list li {
-    margin: 0;
-}
-
-.nav/list .link {
+/* Links (a) */
+.link {
     text-decoration: none;
-    color: #fff;
+    color: #fff; /* Blanco */
     font-size: 16px;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.nav/list .link:hover {
-    background-color: #145dbf; /* Azul más oscuro para el hover */
-    transform: scale(1.05);
+/* Hover effect */
+.link:hover {
+    background-color: #145dbf; /* Azul más oscuro */
+    transform: scale(1.05); /* Ligera ampliación */
+}
+
+/* Active effect */
+.link:active {
+    background-color: #133a6f; /* Azul más profundo */
 }
 
 /* Responsivo */
@@ -48,10 +49,5 @@ nav ul {
     .header {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
     }
 }
