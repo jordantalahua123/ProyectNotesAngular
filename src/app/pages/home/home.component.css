@@ -1,0 +1,140 @@
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: bold;
+  color: #ffffff; /* Azul Facebook */
+}
+
+p {
+  margin: 10px 0;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: #1877f2; /* Azul Facebook */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #145dbf; /* Azul más oscuro */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background:#14abbf; /* Gradiente de azul */
+  color: #fff;
+  border-bottom: 4px solid #145dbf;
+  border-radius: 0 0 20px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Features Section */
+.features {
+  padding: 30px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin: 20px;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.features li {
+  margin: 15px 0;
+  font-size: 18px;
+  color: #333;
+  position: relative;
+  padding-left: 25px;
+}
+
+.features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1877f2;
+  font-size: 16px;
+}
+
+/* Technologies Section */
+.technologies {
+  padding: 40px 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.technologies h2 {
+  color: #1877f2;
+}
+
+.tech-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.tech {
+  text-align: center;
+  width: 120px;
+}
+
+.tech img {
+  max-width: 80px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.tech img:hover {
+  transform: scale(1.1); /* Efecto de zoom */
+}
+
+.tech p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c1e21;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #14abbf;
+  color: #fff;
+  font-size: 14px;
+  border-top: 4px solid #145dbf;
+}
+
+.footer a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  text-decoration: none;
+}

@@ -24,7 +24,27 @@ export class CreateNoteComponent {
       title:this.noteTitle,
       marked: false
     }
-    this.noteService.createNote(newNote);
-    this.noteTitle = ''; // Limpia el campo después de crear la nota.
+    this.createNote(newNote);
+    
+  }
+  createNote(newNote: Note){
+    this.noteService.createNote(newNote).subscribe({
+      next: () => {
+        this.noteTitle = ''; // Limpia el campo después de crear la nota.
+      },
+      error: (e) => {
+        console.log(e);
+      },
+    })
+  }
+  getNotes() {
+    this.noteService.getNote().subscribe({
+      next: (data) => {
+        this.noteService.notes = data.reverse();
+      },
+      error: (e) => {
+        console.log(e);
+      },
+    });
   }
 }

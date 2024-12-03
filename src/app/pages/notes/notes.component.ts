@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { NoteService } from '../../services/note.service';
 import { NoteCardComponent } from '../../components/note-card/note-card.component';
@@ -8,10 +8,28 @@ import { CreateNoteComponent } from '../../components/create-note/create-note.co
   selector: 'app-notes',
   imports: [HeaderComponent, NoteCardComponent, CreateNoteComponent],
   templateUrl: './notes.component.html',
-  styleUrl: './notes.component.css'
+  styleUrl: './notes.component.css',
 })
-export class NotesComponent {
-  constructor(public noteService: NoteService){
+export class NotesComponent implements OnInit {
+  hasError: boolean = false;
+  isLoading: boolean = true;
+  constructor(public noteService: NoteService) {}
 
+  ngOnInit(): void {
+    this.getNotes();
+  }
+
+  getNotes() {
+    this.noteService.getNote().subscribe({
+      next: (data) => {
+        this.noteService.notes = data.reverse();
+        this.isLoading = false;
+        this.hasError = false;
+      },
+      error: (e) => {
+        console.log(e);
+        this.hasError = true;
+      },
+    });
   }
 }
